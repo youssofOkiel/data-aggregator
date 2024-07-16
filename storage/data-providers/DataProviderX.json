@@ -1,0 +1,50 @@
+[
+    {
+        "parentAmount": 200,
+        "Currency": "USD",
+        "parentEmail": "parent1@parent.eu",
+        "statusCode": 1,
+        "registerationDate": "2018-11-30",
+        "parentIdentification": "d3d29d70-1d25-11e3-8591-034165a3a613"
+    },
+    {
+        "parentAmount": 150,
+        "Currency": "USD",
+        "parentEmail": "parent2@parent.eu",
+        "statusCode": 2,
+        "registerationDate": "2019-03-15",
+        "parentIdentification": "e4e29d70-1d25-11e3-8591-034165a3a614"
+    },
+    {
+        "parentAmount": 300,
+        "Currency": "USD",
+        "parentEmail": "parent3@parent.eu",
+        "statusCode": 3,
+        "registerationDate": "2020-05-20",
+        "parentIdentification": "f5f29d70-1d25-11e3-8591-034165a3a615"
+    },
+    {
+        "parentAmount": 250,
+        "Currency": "USD",
+        "parentEmail": "parent4@parent.eu",
+        "statusCode": 1,
+        "registerationDate": "2021-07-25",
+        "parentIdentification": "a6a29d70-1d25-11e3-8591-034165a3a616"
+    },
+    {
+        "parentAmount": 100,
+        "Currency": "USD",
+        "parentEmail": "parent5@parent.eu",
+        "statusCode": 2,
+        "registerationDate": "2022-09-30",
+        "parentIdentification": "b7b29d70-1d25-11e3-8591-034165a3a617"
+    },
+    {
+        "parentAmount": 400,
+        "Currency": "USD",
+        "parentEmail": "parent6@parent.eu",
+        "statusCode": 3,
+        "registerationDate": "2023-01-10",
+        "parentIdentification": "c8c29d70-1d25-11e3-8591-034165a3a618"
+    }
+]
