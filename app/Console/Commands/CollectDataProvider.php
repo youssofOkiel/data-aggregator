@@ -34,7 +34,7 @@ class CollectDataProvider extends Command
     {
         $dataProviderName = select(
             label: 'Select data provider:',
-            options: DataProviderType::toArray(),
+            options: DataProviderType::getValues(),
             required: true
         );
 

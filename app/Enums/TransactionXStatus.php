@@ -1,8 +1,12 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Enums;
 
-enum TransactionXStatus
+use BenSampo\Enum\Enum;
+
+final class TransactionXStatus extends Enum
 {
     const authorised = 1;
 

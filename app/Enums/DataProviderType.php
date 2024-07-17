@@ -1,16 +1,23 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Enums;
 
-enum DataProviderType: string
-{
-    case DataProviderX = 'data_provider_x';
-    case DataProviderY = 'data_provider_y';
+use BenSampo\Enum\Enum;
 
-    public static function toArray(): array
+final class DataProviderType extends Enum
+{
+    const DataProviderX = 'data_provider_x';
+
+    const DataProviderY = 'data_provider_y';
+
+    public static function getProviderTransactionStatusClass(string $provider): string
     {
-        return collect(self::cases())
-            ->map(fn ($value) => $value->value)
-            ->toArray();
+        return match ($provider) {
+            self::DataProviderX => TransactionXStatus::class,
+            self::DataProviderY => TransactionYStatus::class,
+            default => throw new \Exception('Invalid provider name'),
+        };
     }
 }
