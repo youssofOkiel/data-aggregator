@@ -13,8 +13,8 @@ class ProviderStrategyContext
     public function __construct($strategy)
     {
         $this->strategy = match ($strategy) {
-            DataProviderType::DataProviderX->value => new DataProviderXStrategy(),
-            DataProviderType::DataProviderY->value => new DataProviderYStrategy(),
+            DataProviderType::DataProviderX => new DataProviderXStrategy(),
+            DataProviderType::DataProviderY => new DataProviderYStrategy(),
             default => throw new \Exception('Invalid provider name'),
         };
     }

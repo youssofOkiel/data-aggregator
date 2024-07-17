@@ -6,6 +6,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Support\Arr;
 
 class User extends Authenticatable
 {
@@ -47,6 +48,17 @@ class User extends Authenticatable
 
     public function transactions()
     {
-        return $this->hasMany(Transaction::class);
+        return $this->hasMany(Transaction::class, 'user_email', 'email');
+    }
+
+    public function withCriteria(...$criteria)
+    {
+        $criteria = Arr::flatten($criteria);
+
+        foreach ($criteria as $criterion) {
+            $this->model = $criterion->apply($this->model);
+        }
+
+        return $this;
     }
 }
