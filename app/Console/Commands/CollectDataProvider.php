@@ -55,7 +55,7 @@ class CollectDataProvider extends Command
                 ->chunk(1000)
                 ->each(fn (Collection $transactions) => StoreProvidersData::dispatch($transactions, $dataProviderName));
 
-            $this->info('Data fetched successfully.');
+            $this->info('Storing data from '.$dataProviderName.' in progress...');
         }
     }
 }
